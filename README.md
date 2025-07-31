@@ -1,3 +1,4 @@
+
 # Retail Sales Trends & RFM Segmentation (Databricks SQL)
 
 
@@ -21,15 +22,22 @@ Segment customers based on their purchasing behavior using RFM (Recency, Frequen
 
 **Business Problem**
 
-Retail businesses often face challenges in understanding their sales performance, identifying effective marketing strategies, and retaining valuable customers. Without clear, data-driven insights, decisions regarding inventory, promotions, and customer engagement can be inefficient and lead to missed opportunities or declining revenue. Key questions addressed by this project include:
+Retail businesses often face challenges in understanding their sales performance, identifying effective marketing strategies, and retaining valuable customers. Without clear, data-driven insights, decisions regarding inventory,
+
+promotions, and customer engagement can be inefficient and lead to missed opportunities or declining revenue. Key questions addressed by this project include:
 
 What are the underlying sales trends and seasonal patterns?
 
+
 Which products and customer demographics drive the most revenue?
+
 
 How can customers be effectively segmented to personalize marketing efforts?
 
+
 Which customers are at risk of churning, and who are the most loyal?
+
+
 
 
 
@@ -50,6 +58,8 @@ The visualizations and derived insights empower businesses to make informed deci
 
 
 
+
+
 **Tools Used:**
 
 Databricks SQL Editor
@@ -61,9 +71,15 @@ SQL (for data manipulation, aggregation, and analysis)
 
 
 
+
+
+
 **Data Source:**
 
 The dataset used for this analysis is a publicly available Retail Sales Dataset from Kaggle. It contains transactional data including customer details, product information, quantities, prices, and transaction dates.
+
+
+
 
 
 
@@ -72,7 +88,11 @@ The dataset used for this analysis is a publicly available Retail Sales Dataset 
 The analysis is structured into several key phases, each documented with SQL scripts and visualizations.
 
 
+
+
+
 # 1. Data Cleaning & Initial Transformation
+
 This initial step involved loading the raw retail sales data and performing essential cleaning and transformation to ensure data quality and usability for downstream analysis. This included:
 
 Renaming columns for better readability and SQL compatibility.
@@ -97,12 +117,15 @@ Deriving new time-based features such as OrderYear, OrderMonth, and OrderDayOfWe
 <img width="1321" height="321" alt="image" src="https://github.com/user-attachments/assets/b2ecfcc6-718f-4047-831a-0c89e4e4f355" />
 
 
-
-
 **Insight**: This table represents the clean and transformed dataset, ready for analysis. It includes standardized column names, correct data types, and derived time components, ensuring consistency and accuracy for subsequent aggregations and insights.
 
 
+
+
+
+
 # 2. Exploratory Data Analysis (EDA) & Aggregation
+
 In this phase, various summary tables were created to aggregate the cleaned data and derive key performance indicators, providing insights into different aspects of the retail business. Each summary table is accompanied by a relevant visualization.
 
 
@@ -110,7 +133,11 @@ In this phase, various summary tables were created to aggregate the cleaned data
 
 
 **Monthly Sales Trends**
+
+
 This analysis provides an overview of sales performance on a monthly basis, allowing us to identify seasonal patterns and overall growth.
+
+
 
 **SQL Script: SQL_scripts/02_monthly_sales_summary.sql**
 
@@ -128,8 +155,10 @@ This analysis provides an overview of sales performance on a monthly basis, allo
 
 
 
-
 **Insight**: This table aggregates total sales and other metrics by month and year. It provides the foundational data to observe month-over-month sales fluctuations and identify potential seasonality or growth trends before visualization.
+
+
+
 
 
 
@@ -141,7 +170,15 @@ This analysis provides an overview of sales performance on a monthly basis, allo
 
 
 
-**Insight**: The line chart for monthly sales clearly illustrates fluctuating trends over time, with noticeable peaks and dips. This pattern suggests strong seasonality in retail purchases, which can inform inventory management and marketing campaign timing. For instance, if peaks occur consistently in November and December, these periods could be targeted for increased promotional activity.
+**Insight**: The line chart for monthly sales clearly illustrates fluctuating trends over time, with noticeable peaks and dips. This pattern suggests strong seasonality in retail purchases, which can inform inventory management and 
+
+marketing campaign timing. For instance, if peaks occur consistently in November and December, these periods could be targeted for increased promotional activity.
+
+
+
+
+
+
 
 
 
@@ -168,12 +205,25 @@ This analysis highlights the sales contribution of different product categories,
 
 
 
+
+
+
+
+
 **Visualization: Product Category Sales**
 
 
 <img width="651" height="324" alt="Product Category Sales" src="https://github.com/user-attachments/assets/fe01b184-055a-4877-b0ba-6ced7dd54dfe" />
 
-**Insight:** The bar chart clearly shows that Electronics and Clothing emerge as the leading product categories by total sales, indicating strong customer preference and market demand in these areas. Beauty follows, suggesting it's a significant, but potentially underperforming, category where targeted promotions or product diversification could yield growth.
+
+
+**Insight:** The bar chart clearly shows that Electronics and Clothing emerge as the leading product categories by total sales, indicating strong customer preference and market demand in these areas. Beauty follows,
+
+suggesting it's a significant, but potentially underperforming, category where targeted promotions or product diversification could yield growth.
+
+
+
+
 
 
 
@@ -188,11 +238,17 @@ This table identifies customers with the highest total spending, useful for unde
 <img width="632" height="437" alt="image" src="https://github.com/user-attachments/assets/5c248081-f870-4bbd-8127-c2c09619d714" />
 
 
+
 **Resulting Table (Top 20 Customer Spend):**
+
+
 
 <img width="576" height="324" alt="Top 20 Customers" src="https://github.com/user-attachments/assets/63c54129-32fe-43e0-ac57-14b6c2198782" />
 
+
 **Insight**: This table lists individual customers by their total spending, ordered from highest to lowest. It allows for the direct identification of top-tier customers, providing a foundation for loyalty programs or personalized outreach to reward and retain them.
+
+
 
 
 
@@ -216,13 +272,17 @@ This analysis segments sales data by customer demographics, revealing how differ
 **Insight:** This table provides a detailed breakdown of total sales, unique customers, and total transactions across various age groups and genders. It's essential for understanding which demographic segments are most lucrative and how sales are distributed among them.
 
 
+
+
+
+
+
 V**isualization: Sales Performance by Gender and Age Group**
 
 
 <img width="669" height="324" alt="Sales Perfromance by Gender and Age Group" src="https://github.com/user-attachments/assets/e3c9ecfc-79c4-42b6-af99-5ea06f72cffd" />
 
 **Insight**: The stacked bar chart effectively visualizes that the 25-34 and 35-44 age groups contribute most significantly to overall sales, with Female customers consistently showing higher spending across most age segments. This insight is crucial for tailoring marketing content and product recommendations to resonate with these high-value demographic groups.
-
 
 
 
@@ -348,7 +408,9 @@ Customers are assigned a score from 1 to 5 for each RFM metric using the NTILE w
 
 
 
-**Insight**: This table translates the raw RFM values into standardized scores (1-5). These scores are crucial for the next step of segmentation, as they allow for a consistent way to compare and group customers based on their relative purchasing behavior across the three dimensions. For example, an R_Score of 5 indicates a very recent purchase, while an M_Score of 5 indicates high spending.
+**Insight**: This table translates the raw RFM values into standardized scores (1-5). These scores are crucial for the next step of segmentation, as they allow for a consistent way to compare and group customers based on their 
+
+relative purchasing behavior across the three dimensions. For example, an R_Score of 5 indicates a very recent purchase, while an M_Score of 5 indicates high spending.
 
 
 
@@ -376,7 +438,9 @@ Finally, customers are categorized into actionable segments (e.g., 'Champions', 
 
 
 
-**Insight:** This final summary table provides the count of customers and their total spend within each defined RFM segment. It's the actionable output of the RFM analysis, allowing the business to quickly see the size and value of different customer groups, such as 'Champions' (most valuable) or 'Churned/Lost' (requiring re-engagement). This table directly supports strategic marketing decisions.
+**Insight:** This final summary table provides the count of customers and their total spend within each defined RFM segment. It's the actionable output of the RFM analysis, allowing the business to quickly see the size and 
+
+value of different customer groups, such as 'Champions' (most valuable) or 'Churned/Lost' (requiring re-engagement). This table directly supports strategic marketing decisions.
 
 
 
@@ -388,12 +452,16 @@ Finally, customers are categorized into actionable segments (e.g., 'Champions', 
 
 
 
-**Insight:** The bar chart clearly illustrates the distribution of customers across various segments by count. The 'Other Segment' often represents a diverse group not fitting neatly into predefined categories, which might warrant further investigation. However, key segments like 'Champions' (representing the most valuable customers) and 'At Risk' (customers who might churn) are clearly identified.
+**Insight:** The bar chart clearly illustrates the distribution of customers across various segments by count. The 'Other Segment' often represents a diverse group not fitting neatly into predefined categories, which might warrant further
+
+investigation. However, key segments like 'Champions' (representing the most valuable customers) and 'At Risk' (customers who might churn) are clearly identified.
+
 This visual representation is vital for enabling targeted marketing and retention strategies based on customer behavior, allowing for a quick understanding of the customer base's health.
 
 
 
 # Key Findings & Business Recommendations
+
 Based on the analysis, here are some key findings and actionable recommendations:
 
 **Seasonal Trends**: Sales show a strong seasonality, typically peaking in November and December due to holiday shopping, and experiencing dips in January and September.
@@ -436,6 +504,8 @@ Based on the analysis, here are some key findings and actionable recommendations
 
 
 
+
+
 # Business Impact
 This project directly translates data into tangible business value by providing actionable insights that can drive strategic decisions. The key business impacts include:
 
@@ -448,5 +518,10 @@ Improved Customer Retention & Loyalty: RFM segmentation identifies valuable cust
 Data-Driven Decision Making: The project establishes a robust framework for continuous data analysis, empowering stakeholders to make informed, evidence-based decisions that contribute directly to revenue growth and operational efficiency.
 
 
+
+
+
 # Conclusion
-This project demonstrates the power of SQL within Databricks for performing end-to-end data analysis, from raw data cleaning to advanced customer segmentation. The insights derived can directly inform business strategies, optimize marketing efforts, and ultimately drive sales growth and customer satisfaction in a retail environment.
+This project demonstrates the power of SQL within Databricks for performing end-to-end data analysis, from raw data cleaning to advanced customer segmentation. The insights derived 
+
+can directly inform business strategies, optimize marketing efforts, and ultimately drive sales growth and customer satisfaction in a retail environment.
