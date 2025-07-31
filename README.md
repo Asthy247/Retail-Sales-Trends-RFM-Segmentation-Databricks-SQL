@@ -1,5 +1,7 @@
-Retail Sales Trends & RFM Segmentation (Databricks SQL)
-Project Overview
+# Retail Sales Trends & RFM Segmentation (Databricks SQL)
+
+**Project Overview**
+
 This project performs a comprehensive analysis of retail sales data using SQL within the Databricks environment. The primary goals are to:
 
 Clean and transform raw sales data into a structured format.
@@ -10,7 +12,10 @@ Evaluate the performance of different product categories and demographics.
 
 Segment customers based on their purchasing behavior using RFM (Recency, Frequency, Monetary) analysis to enable targeted marketing strategies.
 
-Business Problem
+
+
+**Business Problem**
+
 Retail businesses often face challenges in understanding their sales performance, identifying effective marketing strategies, and retaining valuable customers. Without clear, data-driven insights, decisions regarding inventory, promotions, and customer engagement can be inefficient and lead to missed opportunities or declining revenue. Key questions addressed by this project include:
 
 What are the underlying sales trends and seasonal patterns?
@@ -21,7 +26,10 @@ How can customers be effectively segmented to personalize marketing efforts?
 
 Which customers are at risk of churning, and who are the most loyal?
 
-Solution
+
+
+**Solution**
+
 This project provides a robust, SQL-based solution to address these challenges by transforming raw transactional data into actionable business intelligence. By leveraging Databricks SQL Editor and the Serverless Starter Warehouse, the analysis delivers:
 
 Clean and Structured Data: A reliable foundation for all subsequent analysis.
@@ -34,20 +42,34 @@ Actionable Customer Segmentation: RFM analysis to categorize customers into dist
 
 The visualizations and derived insights empower businesses to make informed decisions, optimize operations, and enhance customer relationships.
 
-Tools Used:
+
+
+
+**Tools Used:**
+
 Databricks SQL Editor
 
 Databricks Serverless Starter Warehouse
 
 SQL (for data manipulation, aggregation, and analysis)
 
-Data Source:
+
+
+
+**Data Source:**
+
 The dataset used for this analysis is a publicly available Retail Sales Dataset from Kaggle. It contains transactional data including customer details, product information, quantities, prices, and transaction dates.
 
-Project Structure
+
+
+
+**Project Structure**
 The analysis is structured into several key phases, each documented with SQL scripts and visualizations.
 
-1. Data Cleaning & Initial Transformation
+
+
+
+**1. Data Cleaning & Initial Transformation**
 This initial step involved loading the raw retail sales data and performing essential cleaning and transformation to ensure data quality and usability for downstream analysis. This included:
 
 Renaming columns for better readability and SQL compatibility.
@@ -58,7 +80,10 @@ Handling potential NULL values and invalid entries (e.g., quantities/prices less
 
 Deriving new time-based features such as OrderYear, OrderMonth, and OrderDayOfWeek for time-series analysis.
 
-SQL Script: SQL_scripts/01_sales_cleaned.sql
+
+
+
+**SQL Script: SQL_scripts/01_sales_cleaned.sql**
 
 -- Replace this with the actual SQL code from your 01_sales_cleaned.sql file
 -- Example structure:
