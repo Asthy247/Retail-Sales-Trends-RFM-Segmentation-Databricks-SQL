@@ -1,5 +1,8 @@
 # Retail Sales Trends & RFM Segmentation (Databricks SQL)
 
+
+
+
 **Project Overview**
 
 This project performs a comprehensive analysis of retail sales data using SQL within the Databricks environment. The primary goals are to:
@@ -11,6 +14,8 @@ Identify key sales trends and patterns over time (monthly, daily, day-of-week).
 Evaluate the performance of different product categories and demographics.
 
 Segment customers based on their purchasing behavior using RFM (Recency, Frequency, Monetary) analysis to enable targeted marketing strategies.
+
+
 
 
 
