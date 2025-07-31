@@ -118,22 +118,19 @@ This analysis provides an overview of sales performance on a monthly basis, allo
 
 **SQL Script: SQL_scripts/02_monthly_sales_summary.sql**
 
-<img width="791" height="429" alt="image" src="https://github.com/user-attachments/assets/7d5a9bb4-c128-4ca9-a24c-1e68d888279b" />
-
 **Resulting Table (Monthly_Sales_Summary):**
 
 <img width="787" height="298" alt="image" src="https://github.com/user-attachments/assets/53052658-337d-4e8f-af07-44572c5e923d" />
 
+**Insight**: 
 
-**Insight**: This table aggregates total sales and other metrics by month and year. It provides the foundational data to observe month-over-month sales fluctuations and identify potential 
+This table aggregates total sales and other metrics by month and year. It provides the foundational data to observe month-over-month sales fluctuations and identify potential 
 
 seasonality or growth trends before visualization.
 
 **Visualization: Monthly Sales Trend**
 
-
-<img width="669" height="324" alt="Monthly Sales Trend" src="https://github.com/user-attachments/assets/f68f7ef8-1350-4402-bd52-16d0196a1bc0" />
-
+<img width="669" height="324" alt="Monthly Sales Trend" src="https://github.com/user-attachments/assets/2afd36b5-38f9-420d-a12e-ccc1826d202b" />
 
 **Insight**: 
 
@@ -145,9 +142,9 @@ activity.
 
 **2b.Product Category Performance**
 
-Th
-**SQL is analysis highlights the sales contribution of different product categories, identifying top-performing and underperforming segments.
-Script: SQL_scripts/03_product_category_summary.sql**
+The analysis highlights the sales contribution of different product categories, identifying top-performing and underperforming segments.
+
+**Script: SQL_scripts/03_product_category_summary.sql**
 
 <img width="477" height="414" alt="image" src="https://github.com/user-attachments/assets/765cea2c-90e9-4296-b55b-997f3de782a6" />
 
