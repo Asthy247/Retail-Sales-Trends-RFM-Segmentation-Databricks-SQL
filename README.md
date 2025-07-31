@@ -199,8 +199,6 @@ This analysis highlights the sales contribution of different product categories,
 
 <img width="576" height="324" alt="Product Category Summary" src="https://github.com/user-attachments/assets/3241e9fe-2182-4eb5-8d5a-ecbd5851e7b1" />
 
-
-
 **Insight**: This table provides a ranked list of product categories by their total sales. It's crucial for quickly identifying which product lines are the primary revenue drivers and which might require more attention or different strategies.
 
 
